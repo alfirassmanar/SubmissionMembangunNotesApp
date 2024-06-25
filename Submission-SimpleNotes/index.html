@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catatan Sederhana</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;">SELAMAT DATANG, SIMPLE-NOTES</h1>
+        <form class="form-tambah-catatan" id="form-tambah-catatan">
+            <input type="text" id="judul" placeholder="Judul" required>
+            <textarea id="konten" placeholder="Apa yang ingin Anda isi" required></textarea>
+            <button type="submit">Tambah Catatan</button>
+        </form>
+        <div id="daftar-catatan" class="daftar-catatan">
+        </div>
+    </div>
+    
+    <template id="catatan-item-template">
+        <style>
+          .catatan-item {
+              background: #fff;
+              width: 400px;
+              height: 140px; 
+              padding: 10px;
+              border-radius: 5px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+              margin-bottom: 10px;
+              overflow: hidden; 
+          }
+
+          .catatan-item .h3,
+          .catatan-item .p,
+          .catatan-item .span {
+              display: block; 
+          }
+
+          .catatan-item .h3 {
+              font-size: 20px;
+              margin-bottom: 5px;
+              margin-top: 20px;
+          }
+
+          .catatan-item .p {
+              font-size: 16px;
+              color: #333;
+              margin-bottom: 10px;
+          }
+
+          .catatan-item .span {
+              font-size: 14px;
+              color: #999;
+          }
+        </style>
+        <div class="catatan-item">
+          <custom-heading class="h3"></custom-heading>
+          <custom-paragraph class="p"></custom-paragraph>
+          <custom-span class="span"></custom-span>
+      </div>
+    </template>
+
+    <script src="./src/notes-apps.js"></script>
+</body>
+</html>
